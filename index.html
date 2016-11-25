@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>I don't care what you did last summer</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <style>
+      @import url(http://fonts.googleapis.com/css?family=Open+Sans:900,700,800,400,300);
+      body {
+        font-family: 'Open Sans';
+        color: #efefef;
+      }
+      a:link, a:visited, a:hover, a:active {
+        color: #efefef;
+      }
+      .remark-slide-content {
+        background-color: black;
+      }
+      h1, h2, h3 {
+        font-family: 'Open Sans';
+        font-weight: 900;
+        letter-spacing: -0.05em;
+        text-shadow: 2px 2px #121212;
+      }
+      h1 {
+        text-transform: uppercase;
+      }
+      .quote {
+        background-color: #efefef;
+        color: #121212;
+        text-align: justify;
+        border: 1px solid white;
+        box-shadow: 1px 1px 10px #efefef;
+        font-size: 1.2em;
+      }
+      .citation {
+        font-size: 0.5em;
+      }
+      .backgroundblue { background-color: rgb(26,115,186); }
+      .backgroundgreen { background-color: rgb(17,170,88); }
+      .backgroundwhite { background-color: #FFF; }
+      .image img {
+        border-radius: 10px;
+        border: 1px solid #efefef;
+        max-width: 100%;
+      }
+      .image-smaller img {
+        border-radius: 10px;
+        border: 1px solid #efefef;
+        max-width: 100%;
+        max-height: 400px;
+      }
+      .header {
+        position: absolute;
+        left: 5px;
+        top: 5px;
+      }
+      .footnote {
+        position: absolute;
+        left: 5px;
+        bottom: 0px;
+      }
+      .footnote img {
+        max-width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create({
+        ratio: '4:3',
+	sourceUrl: 'markdown.md.gen'
+      });
+    </script>
+  </body>
+</html>

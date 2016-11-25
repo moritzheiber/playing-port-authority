@@ -1,0 +1,16 @@
+consul:
+  image: "consul"
+  container_name: "consul"
+  command: agent -dev -client=0.0.0.0
+  ports:
+    - "18500:8500"
+
+sinatra:
+  container_name: "sinatra"
+  build: .
+  dockerfile: Dockerfile.brown_bag_example_3
+  links:
+    - consul
+  ports:
+    - "4567:4567"
+
