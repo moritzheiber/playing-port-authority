@@ -173,18 +173,26 @@ $ bundle exec rspec spec/example1/example_spec.rb
 
 ???
 
---
-[embedmd]:# (spec/example3/example3_spec.rb ruby /after.*/ /end/)
---
-[embedmd]:# (spec/example3/example3_spec.rb ruby /.*docker_container.*/)
-???
-
-- setup/teardown code
-- docker-compose gem
+- setup code
 - start all services
 
+--
+
+[embedmd]:# (spec/example3/example3_spec.rb ruby /after.*/ /end/)
+
+???
+
+- teardown
 - and bring them down afterwards
+
+--
+
+[embedmd]:# (spec/example3/example3_spec.rb ruby /.*docker_container.*/)
+
+???
+
 - tell serverspec to use the container
+
 ---
 
 ### The complete test
