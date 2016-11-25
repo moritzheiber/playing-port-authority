@@ -225,6 +225,8 @@ $ bundle exec rspec spec/example1/example_spec.rb
 ---
 # Links
 
+- [https://github.com/fbernitt/infrastructure-testing](https://github.com/fbernitt/infrastructure-testing)
+
 - [serverspec](http://serverspec.org/)
 - [specinfra](https://github.com/mizzy/specinfra)
 - [rspec-wait](https://github.com/laserlemon/rspec-wait)
