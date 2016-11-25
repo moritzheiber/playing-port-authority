@@ -99,7 +99,6 @@ $ bundle exec rspec spec/example1/example_spec.rb
 ├── Dockerfile.brown_bag_example_1
 ├── Gemfile
 ├── Gemfile.lock
-├── Rakefile
 └── spec
     ├── example1
     │   └── example_spec.rb
@@ -114,9 +113,10 @@ $ bundle exec rspec spec/example1/example_spec.rb
 
 ???
 - typical Gemfile
--- 
 
-## spec_helper.rb
+--
+
+## spec\_helper.rb
 
 [embedmd]:# (spec/spec_helper.rb ruby)
 
@@ -233,13 +233,13 @@ $ bundle exec rspec spec/example1/example_spec.rb
 ---
 # Links
 
-- [https://github.com/fbernitt/infrastructure-testing](https://github.com/fbernitt/infrastructure-testing)
+- This presentation: [https://github.com/fbernitt/infrastructure-testing](https://github.com/fbernitt/infrastructure-testing)
 
-- [serverspec](http://serverspec.org/)
-- [specinfra](https://github.com/mizzy/specinfra)
-- [rspec-wait](https://github.com/laserlemon/rspec-wait)
+- Serverspec: [http://serverspec.org/](http://serverspec.org/)
+- Specinfra: [https://github.com/mizzy/specinfra](https://github.com/mizzy/specinfra)
+- rspec-wait: [https://github.com/laserlemon/rspec-wait](https://github.com/laserlemon/rspec-wait)
 
 ---
 class: center
 
-# THANKS
+# Thanks!
