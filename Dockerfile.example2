@@ -1,9 +1,1 @@
 FROM alpine:3.4
-
-RUN apk --no-cache add ruby ca-certificates ruby-json curl
-
-COPY sinatra_example.rb .
-
-RUN gem install sinatra --no-doc
-
-CMD ["ruby","sinatra_example.rb"]
