@@ -98,14 +98,14 @@ $ bundle exec rspec spec/example1/example_spec.rb
 
 ## Lets turn this test green!
 
-[embedmd]:# (Dockerfile.example_1 Dockerfile)
+[embedmd]:# (Dockerfile.example1 Dockerfile)
 
 ---
 
 # Project structure
 
 ```verbatim
-├── Dockerfile.example_1
+├── Dockerfile.example1
 ├── Gemfile
 ├── Gemfile.lock
 └── spec
@@ -151,7 +151,7 @@ $ bundle exec rspec spec/example1/example_spec.rb
 
 ## Again, make the test green
 
-[embedmd]:# (Dockerfile.example_2 Dockerfile)
+[embedmd]:# (Dockerfile.example2 Dockerfile)
 ---
 
 ## Compose it!

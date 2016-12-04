@@ -1,10 +1,7 @@
 require 'spec_helper'
 require 'open-uri'
 
-image2 = Docker::Image.build_from_dir(
-  '.',
-  'dockerfile' => 'Dockerfile.example2'
-)
+image2 = Docker::Image.build_from_dir('.', dockerfile: 'Dockerfile.example2')
 
 describe 'Example2' do
   set :docker_image, image2.id
