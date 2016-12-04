@@ -17,10 +17,9 @@ $ ./go build
 
 ### Running the code
 
-- Docker >=1.12.x (all the tests are written for it)
-- Ruby >=2.x (for ServerSpec)
-- Bundler >=1.12.4 (to install the necessary Ruby packages)
-
+- [Docker](https://docker.com) >=1.12.x (all the tests are written for it)
+- [Ruby](https://ruby-lang.org) >=2.x (for ServerSpec)
+- [Bundler](https://bundler.io) >=1.12.4 (to install the necessary Ruby packages)
 
 ## Run a local webserver
 
