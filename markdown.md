@@ -19,7 +19,7 @@ class: middle
 
 ---
 
-# Testing production code
+## Testing production code
 
 ```ruby
 describe "fizzbuzz" do
@@ -38,7 +38,7 @@ end
 
 ---
 
-# And testing infrastructure?
+## And testing infrastructure?
 
 ???
 
@@ -102,7 +102,7 @@ $ bundle exec rspec spec/example1/example_spec.rb
 
 ---
 
-# Project structure
+## Project structure
 
 ```verbatim
 ├── Dockerfile.example1
@@ -229,26 +229,38 @@ $ bundle exec rspec spec/example1/example_spec.rb
 - cron
 - group
 - ...
+
 ---
 ## Backends
 
-- docker
-- ssh
-- shell script
+--
+
+### docker
+### ssh
+### exec
+### winrm
+### ...
 
 ???
 
 - Many different backends
+
 ---
 # Links
 
-- This presentation: [https://github.com/fbernitt/infrastructure-testing](https://github.com/fbernitt/infrastructure-testing)
+- This presentation: [https://github.com/moritzheiber/playing-port-authority](https://github.com/moritzheiber/playing-port-authority)
 
 - Serverspec: [http://serverspec.org/](http://serverspec.org/)
 - Specinfra: [https://github.com/mizzy/specinfra](https://github.com/mizzy/specinfra)
 - rspec-wait: [https://github.com/laserlemon/rspec-wait](https://github.com/laserlemon/rspec-wait)
 
 ---
-class: center
+class: center, middle
+background-image: url(images/containers.png)
 
+.dark-bg[
 # Thanks!
+<i class="fa fa-twitter"></i> moritzheiber | <i class="fa fa-envelope"></i> mheiber@thoughtworks.com | <i class="fa fa-home"></i> heiber.im
+]
+
+.footnote[.citation[Scanrail - http://theloadstar.co.uk/container-shipping-rates-still-falling-forward-data-points-upward-trend/]]
