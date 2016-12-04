@@ -2,7 +2,7 @@ require 'spec_helper'
 
 image = Docker::Image.build_from_dir(
   '.',
-  'dockerfile' => 'Dockerfile.brown_bag_example_1'
+  'dockerfile' => 'Dockerfile.example1'
 )
 
 describe 'Example1' do

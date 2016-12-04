@@ -3,7 +3,7 @@ require 'open-uri'
 
 image2 = Docker::Image.build_from_dir(
   '.',
-  'dockerfile' => 'Dockerfile.brown_bag_example_2'
+  'dockerfile' => 'Dockerfile.example2'
 )
 
 describe 'Example2' do

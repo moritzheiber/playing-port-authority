@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>I don't care what you did last summer</title>
+    <title>Playing Port Authority</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <style>
@@ -37,6 +37,7 @@
         font-size: 0.5em;
       }
       .backgroundblue { background-color: rgb(26,115,186); }
+      .backgroundcolor { background-color: #702269; }
       .backgroundgreen { background-color: rgb(17,170,88); }
       .backgroundwhite { background-color: #FFF; }
       .image img {
@@ -66,14 +67,14 @@
     </style>
   </head>
   <body>
-    <textarea id="source">
-    </textarea>
     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
     </script>
     <script>
       var slideshow = remark.create({
-        ratio: '4:3',
-	sourceUrl: 'markdown.md.gen'
+        ratio: '16:9',
+        sourceUrl: 'markdown.md.gen',
+        countIncrementalSlides: false,
+        highlightStyle: 'solarized-dark'
       });
     </script>
   </body>

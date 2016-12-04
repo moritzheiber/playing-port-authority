@@ -6,7 +6,7 @@ consul:
 sinatra:
   container_name: "sinatra"
   build: .
-  dockerfile: Dockerfile.brown_bag_example_3
+  dockerfile: Dockerfile.example3
   links:
     - consul
   ports:

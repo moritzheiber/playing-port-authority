@@ -33,8 +33,12 @@ function task_test3 {
 }
 
 function task_usage {
-    echo "Usage: $0 build | test1 | test2 | test3"
-    exit 1
+  echo "Usage: $0 build | test1 | test2 | test3"
+  exit 1
+}
+
+function task_serve {
+  python -m SimpleHTTPServer 8000 0.0.0.0
 }
 
 CMD=${1:-}
@@ -44,5 +48,6 @@ case ${CMD} in
   test1) task_test1 ;;
   test2) task_test2 ;;
   test3) task_test3 ;;
+  serve) task_serve ;;
   *) task_usage ;;
 esac

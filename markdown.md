@@ -1,11 +1,18 @@
-class: middle, left, backgroundblue
+class: top, left, backgroundcolor
 layout: true
 count: false
+background-size: contain
+
+.footnote[<img src="images/TW Colour Logos_trans_white.png" />]
 
 ---
-class: center
+background-image: url(images/port-authority.png)
+class: middle
 
-# Infrastructure Testing with serverspec
+# Playing Port Authority
+## TDD for containers
+
+.footnote[.citation[CC-BY-2.0: https://www.flickr.com/photos/hamptonroadspartnership/]]
 
 ???
 
@@ -31,7 +38,7 @@ end
 
 ---
 
-## And testing infrastructure?
+# And testing infrastructure?
 
 ???
 
@@ -72,6 +79,8 @@ end
 - the actual test
 
 ---
+class: middle
+
 ## Execute it!
 
 ```bash
@@ -87,16 +96,16 @@ $ bundle exec rspec spec/example1/example_spec.rb
 
 ---
 
-## Make it green!
+## Lets turn this test green!
 
-[embedmd]:# (Dockerfile.brown_bag_example_1 Dockerfile)
+[embedmd]:# (Dockerfile.example_1 Dockerfile)
 
 ---
 
 # Project structure
 
 ```verbatim
-├── Dockerfile.brown_bag_example_1
+├── Dockerfile.example_1
 ├── Gemfile
 ├── Gemfile.lock
 └── spec
@@ -142,7 +151,7 @@ $ bundle exec rspec spec/example1/example_spec.rb
 
 ## Again, make the test green
 
-[embedmd]:# (Dockerfile.brown_bag_example_2 Dockerfile)
+[embedmd]:# (Dockerfile.example_2 Dockerfile)
 ---
 
 ## Compose it!
