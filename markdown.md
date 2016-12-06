@@ -44,6 +44,7 @@ end
 - You write your test first, then you run it (and hopefully it'll return a red warning) and then you write the code to satisfy the test
 - Small, incremental steps
 - It's Red > Green > Refactor
+- This is example in RSpec, a BDD framework for Ruby
 
 ---
 
@@ -67,6 +68,10 @@ end
 - Lets look at some parts in more detail
 
 ---
+
+## Step by step
+
+--
 
 [embedmd]:# (spec/example1/example_spec.rb ruby /image =/ /\)/)
 
@@ -105,6 +110,8 @@ $ bundle exec rspec spec/example1/example_spec.rb
 
 - ruby bundler
 - Run like any other rspec test
+- **CHANGE THE BRANCH HERE**
+- **RUN TEST1**
 
 ---
 
@@ -164,6 +171,8 @@ $ bundle exec rspec spec/example1/example_spec.rb
 
 - But let's move on to something that's a little more complicated
 
+- **SWITCH BRANCH AND RUN TEST1**
+
 ---
 
 ## Step 2 - Simple Web Service
@@ -183,11 +192,21 @@ $ bundle exec rspec spec/example1/example_spec.rb
 
 [embedmd]:# (spec/example2/example2_spec.rb ruby /.*image2.*/ $)
 
+???
+
+- **SWITCH BRANCH AND RUN TEST2**
+- **SWITCH BACK TO MASTER**
+
 ---
 
 ## Again, make the test green
 
 [embedmd]:# (Dockerfile.example2 Dockerfile)
+
+???
+
+- **RUN TEST2 AGAIN**
+
 ---
 
 ## Compose it!
@@ -249,6 +268,23 @@ $ bundle exec rspec spec/example1/example_spec.rb
 ### continued
 
 [embedmd]:# (spec/example3/example3_spec.rb ruby /describe.*Consul Connection/ /end\nend/)
+
+???
+
+- **SWITCH BRANCH + RUN TEST**
+- **SWITCH BACK**
+
+---
+
+## Dockerfile for connected Sinatra app
+
+--
+
+[embedmd]:# (Dockerfile.example3 dockerfile)
+
+???
+
+- **RUN TEST**
 
 ---
 ## Resource Types
