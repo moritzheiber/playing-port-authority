@@ -29,6 +29,7 @@ function task_test2 {
 
 function task_test3 {
   ensure_bundle
+  docker-compose build --no-cache
   bundle exec rspec spec/example3/example3_spec.rb
 }
 
