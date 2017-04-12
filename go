@@ -33,13 +33,15 @@ function task_test3 {
   bundle exec rspec spec/example3/example3_spec.rb
 }
 
-function task_usage {
-  echo "Usage: $0 build | test1 | test2 | test3"
-  exit 1
+function task_serve {
+  task_build
+
+  python -m SimpleHTTPServer 8000 0.0.0.0
 }
 
-function task_serve {
-  python -m SimpleHTTPServer 8000 0.0.0.0
+function task_usage {
+  echo "Usage: $0 build | serve | test1 | test2 | test3"
+  exit 1
 }
 
 CMD=${1:-}

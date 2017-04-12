@@ -16,6 +16,41 @@ class: middle
 
 ???
 
+- Hello everyone, my name is Moritz Heiber, I'm going to be talking about building infrastructure today in the sense of playing Port Authority when using containers. Meaning, while you do build containers and load them with precious cargo (hint: your applications) you're also keeping a close eye on what's expected of these containers.
+- You're essentially playing port authority.
+
+---
+class: center, middle, backgroundcolor
+layout: true
+count: false
+
+.footnote[<img src="images/TW Colour Logos_trans_white.png" />]
+
+---
+class: center
+
+.image[
+<img src="images/business_card.jpg" />
+]
+
+???
+
+- This is my actual business card, I have them with me
+- I call myself a "birth assistant", a birth assistant
+  - If you didn't know, it is the male equivalent to a midwife
+- And I call myself a birth assistant because that's why I usually do .. every larger (and sometimes smaller) software and/or hardware projects is precious to product managers, developers and engineers alike, and I help people bring their software and hardware babies into the world, using DevOps, Continuous Delivery, Microservices and some other buzzwords I forgot about right now
+
+- But let's get to why we're here
+
+---
+class: center
+
+.image[
+<img src="images/docker_logo.svg" />
+]
+
+???
+
 - These days a lot of things (tm) are getting build using container technology. Docker is a prime contender on the market, a lot of people are using its versatility, portability and isolation to structure their applications, enable them to develop complex interconnected applications faster and deploy them with little effort. Docker, in a sense, is the manifestation of Infrastructure as Code, given that a Dockerfile is code and usually contains a set of instructions which provisions an environment meant for running software.
 
 - However, as much as we usually follow TDD principles with regular software these days, when it comes to infrastructure and containers in particular many people usually have the approach of plug and pray (tm), whereas it seemingly is easier to just "try out some changes" and deal with the resulting Armageddon through rollbacks or other mitigations.
@@ -25,12 +60,20 @@ class: middle
 - But what if we were to apply the same principles and methodologies we apply to our "regular" code to infrastructure and container code as well? What if you were to write unit, functional and integration tests **before** writing your infrastructure and container code? And could then verify immediately, by running your tests that you were on the right track? Sort of like "inspecting" your containers on the fly instead of just letting them past unchecked, loaded onto carriers and destined for uncharted waters?
 
 ---
+class: top, left, backgroundcolor
+layout: true
+count: false
+background-size: contain
+
+.footnote[<img src="images/TW Colour Logos_trans_white.png" />]
+
+---
 
 ## Testing production code
 
 ```ruby
 describe "fizzbuzz" do
-  it 'returns "Fizz" when the number is divisible by 3' do
+  it 'returns "Fizz" when the number can be divided by 3' do
     fizz_3 = fizzbuzz(3)
 
     expect(fizz_3).to eq("Fizz")
@@ -54,8 +97,8 @@ end
 
 - What if you could test a container in the same way
 - serverspec
-- - based on rspec and specinfra
-- - lightweight
+  - based on rspec and specinfra
+  - lightweight
 - You can do TDD with this!
 
 --
@@ -122,9 +165,9 @@ $ bundle exec rspec spec/example1/example_spec.rb
 ???
 
 - Using Alpine as anything in a container should start with Alpine these days
-- - Officially supported by Docker Inc.
-- - It's just 2MB (!), has so many ready-to-use packages
-- - Laziness comes at the cost of security and instability
+  - Officially supported by Docker Inc.
+  - It's just 2MB (!), has so many ready-to-use packages
+  - Laziness comes at the cost of security and instability
 - All it does is install the ruby package. DONE
 
 ---
@@ -167,7 +210,7 @@ $ bundle exec rspec spec/example1/example_spec.rb
 - require gems
 - Tell serverspec to use Docker as its backend
 - Tell serverspec about the OS
-- - Many other OS supported, including Windows (!)
+  - Many other OS supported, including Windows (!)
 
 - But let's move on to something that's a little more complicated
 
@@ -220,7 +263,7 @@ $ bundle exec rspec spec/example1/example_spec.rb
 
 - What if: testing in concert
 - Assume sinatra web service consul
-- - Get welcome message
+  - Get welcome message
 ---
 
 ### docker-compose.yml
@@ -297,10 +340,12 @@ $ bundle exec rspec spec/example1/example_spec.rb
 ```
 --
 - user
-- process
-- cron
 - group
-- ...
+- process
+- port
+- **x509\_certificate**
+- **docker\_container/\_image**
+- _many more_...
 
 ---
 ## Backends
@@ -320,11 +365,13 @@ $ bundle exec rspec spec/example1/example_spec.rb
 ---
 # Links
 
-- This presentation: [https://github.com/moritzheiber/playing-port-authority](https://github.com/moritzheiber/playing-port-authority)
+- **This presentation: [https://github.com/moritzheiber/playing-port-authority](https://github.com/moritzheiber/playing-port-authority)**
 
-- Serverspec: [http://serverspec.org/](http://serverspec.org/)
-- Specinfra: [https://github.com/mizzy/specinfra](https://github.com/mizzy/specinfra)
-- rspec-wait: [https://github.com/laserlemon/rspec-wait](https://github.com/laserlemon/rspec-wait)
+- **Serverspec: [http://serverspec.org/](http://serverspec.org/)**
+
+- **Specinfra: [https://github.com/mizzy/specinfra](https://github.com/mizzy/specinfra)**
+
+- **rspec-wait: [https://github.com/laserlemon/rspec-wait](https://github.com/laserlemon/rspec-wait)**
 
 ---
 class: center, middle
@@ -332,7 +379,7 @@ background-image: url(images/containers.png)
 
 .dark-bg[
 # Thanks!
-<i class="fa fa-twitter"></i> moritzheiber | <i class="fa fa-envelope"></i> mheiber@thoughtworks.com | <i class="fa fa-home"></i> heiber.im
+<img class="mastodon-logo" src="images/mastodon-logo.svg" /> moritzheiber@mastodon.social | <i class="fa fa-envelope"></i> mheiber@thoughtworks.com | <i class="fa fa-home"></i> heiber.im
 ]
 
 .footnote[.citation[Scanrail - http://theloadstar.co.uk/container-shipping-rates-still-falling-forward-data-points-upward-trend/]]

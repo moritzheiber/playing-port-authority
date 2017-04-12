@@ -40,15 +40,19 @@
       .backgroundcolor { background-color: #702269; }
       .backgroundgreen { background-color: rgb(17,170,88); }
       .backgroundwhite { background-color: #FFF; }
+      .image {
+        max-width: 70%;
+        margin: 0 auto;
+      }
       .image img {
         border-radius: 10px;
         border: 1px solid #efefef;
         max-width: 100%;
+        background-color: #fff;
       }
       .image-smaller img {
         border-radius: 10px;
         border: 1px solid #efefef;
-        max-width: 100%;
         max-height: 400px;
       }
       .header {
@@ -67,8 +71,21 @@
       .dark-bg {
         background:rgba(120,120,120,0.8);
         padding: 10px;
-        margin: 0 18% 0 18%;
+        margin: 0 9% 0 9%;
         border-radius: 10px;
+      }
+      .mastodon-logo {
+        max-height: 1em;
+        vertical-align: middle;
+      }
+      ul {
+        list-style-type: none;
+      }
+
+      ul > li:before {
+        content: "–";
+        position: absolute;
+        margin-left: -1.1em;
       }
     </style>
   </head>
