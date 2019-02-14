@@ -103,7 +103,7 @@ end
 
 --
 
-[embedmd]:# (spec/example1/example_spec.rb ruby)
+[embedmd]:# (spec/example1/example_spec.rb ruby /image =/ $)
 
 ???
 
@@ -132,14 +132,13 @@ end
 
 --
 
-[embedmd]:# (spec/example1/example_spec.rb ruby /.*it .*/ /end/)
+[embedmd]:# (spec/example1/example_spec.rb ruby /.*describe\ \'package\ ruby'.*/ /^....end\n..end/)
 
 ???
 
 - the actual test
 
 ---
-class: middle
 
 ## Execute it!
 
@@ -159,6 +158,8 @@ $ bundle exec rspec spec/example1/example_spec.rb
 ---
 
 ## Lets turn this test green!
+
+--
 
 [embedmd]:# (Dockerfile.example1 Dockerfile)
 
@@ -233,7 +234,7 @@ $ bundle exec rspec spec/example1/example_spec.rb
 
 ## Test service in container
 
-[embedmd]:# (spec/example2/example2_spec.rb ruby /.*image2.*/ $)
+[embedmd]:# (spec/example2/example2_spec.rb ruby /describe.*/ $)
 
 ???
 
@@ -304,7 +305,7 @@ $ bundle exec rspec spec/example1/example_spec.rb
 
 ### The complete test
 
-[embedmd]:# (spec/example3/example3_spec.rb ruby /.*/ /Consul Connection/)
+[embedmd]:# (spec/example3/example3_spec.rb ruby /describe/ /true\)\n..end/)
 
 ---
 
@@ -379,7 +380,7 @@ background-image: url(images/containers.png)
 
 .dark-bg[
 # Thanks!
-<img class="mastodon-logo" src="images/mastodon-logo.svg" /> moritzheiber@mastodon.social | <i class="fa fa-envelope"></i> mheiber@thoughtworks.com | <i class="fa fa-home"></i> heiber.im
+<img class="mastodon-logo" src="images/mastodon-logo.svg" /> @mheiber@toot.thoughtworks.com | <i class="fa fa-envelope"></i> mheiber@thoughtworks.com | <i class="fa fa-home"></i> heiber.im
 ]
 
 .footnote[.citation[Scanrail - http://theloadstar.co.uk/container-shipping-rates-still-falling-forward-data-points-upward-trend/]]

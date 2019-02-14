@@ -10,7 +10,7 @@ image = Docker::Image.build_from_dir(
   end
 end
 
-describe 'Example1' do
+describe 'example1' do
   set :docker_image, image.id
 
   describe 'package ruby' do
