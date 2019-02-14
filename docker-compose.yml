@@ -1,14 +1,16 @@
-consul:
-  image: "consul"
-  container_name: "consul"
-  command: agent -dev -client=0.0.0.0
+version: "3"
+services:
+  consul:
+    image: "consul"
+    command: agent -dev -client=0.0.0.0
 
-sinatra:
-  container_name: "sinatra"
-  build: .
-  dockerfile: Dockerfile.example3
-  links:
-    - consul
-  ports:
-    - "4567:4567"
-
+  sinatra:
+    image: "sinatra"
+    container_name: "sinatra"
+    build:
+      context: ./
+      dockerfile: "Dockerfile.example3"
+    depends_on:
+      - consul
+    ports:
+      - "4567:4567"
