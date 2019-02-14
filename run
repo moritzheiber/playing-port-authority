@@ -1,8 +1,8 @@
 #!/bin/bash
 
-set -eu
+set -Eeu -o pipefail
 
-function ensure_bundle {
+_ensure_bundle() {
   if [ ! -d vendor/bundle ]; then
       bundle install --path vendor/bundle
   fi
@@ -13,24 +13,31 @@ function ensure_bundle {
   fi
 }
 
-function task_build {
+build() {
   embedmd markdown.md > markdown.md.gen
 }
 
-function task_test1 {
-  ensure_bundle
+test1() {
+  _ensure_bundle
   bundle exec rspec spec/example1/example_spec.rb
 }
 
-function task_test2 {
-  ensure_bundle
+test2() {
+  _ensure_bundle
   bundle exec rspec spec/example2/example2_spec.rb
 }
 
-function task_test3 {
-  ensure_bundle
+test3() {
+  _ensure_bundle
+
   docker-compose build --no-cache
   bundle exec rspec spec/example3/example3_spec.rb
+}
+
+serve() {
+  build
+
+  python -m SimpleHTTPServer 8000 0.0.0.0
 }
 
 function task_usage {
@@ -38,17 +45,13 @@ function task_usage {
   exit 1
 }
 
-function task_serve {
-  python -m SimpleHTTPServer 8000 0.0.0.0
-}
-
 CMD=${1:-}
 shift || true
 case ${CMD} in
-  build) task_build ;;
-  test1) task_test1 ;;
-  test2) task_test2 ;;
-  test3) task_test3 ;;
-  serve) task_serve ;;
+  build) build ;;
+  test1) test1 ;;
+  test2) test2 ;;
+  test3) test3 ;;
+  serve) serve ;;
   *) task_usage ;;
 esac

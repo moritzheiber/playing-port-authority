@@ -8,7 +8,8 @@ describe 'Example3' do
   before(:all) do
     compose.up(detached: true)
 
-    c = Docker::Container.get('consul')
+    id = compose.ps.find { |c| c.image == 'consul' }.id
+    c = Docker::Container.get(id)
     sleep 3 # wait for consul to start
     c.exec(['consul', 'kv', 'put', 'sinatra/message',
             'hello from consul'])
@@ -20,7 +21,7 @@ describe 'Example3' do
   end
 
   describe 'Consul Connection' do
-    it 'should respond with consul kv "hello from consul"' do
+    it 'responds with consul kv "hello from consul"' do
       wait_for(
         website_content('http://localhost:4567/message')
       ).to match(/hello from consul/)
