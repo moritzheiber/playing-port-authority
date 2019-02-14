@@ -43,6 +43,39 @@ class: center
 - But let's get to why we're here
 
 ---
+
+???
+
+- Who in here has used TDD before?
+
+--
+
+.image.smaller[
+<img src="images/keyboard-cat.gif" />
+]
+
+???
+
+- TDD has become an essential technique for creating modern, reliable and resilient applications, especially when it comes to handy practices such as Continuous Delivery
+- You write your (unit) test, you write your code, rinse and repeat, out comes your clearly modeled application code, fully verified to conform to your expectations, because you literally have written them, as code, before you wrote the actual application part which they refer to
+- This has become such a well-established practice that it's the de-facto standard for whenever we are co- or full-delivering with our clients; and a lot of others are using it too, obviously
+
+---
+
+# ? ? ?
+
+???
+
+- So the question is: why aren't we using it for everything? Especially since other practices like Infrastructure as Code have been around now for a while
+- Well, what if I told you this is exactly what we are doing, and what you can do, with a few small, incremental steps (agile joke!) TODAY using containers!
+
+---
+
+.image.larger[
+<img src="images/wat.gif" />
+]
+
+---
 class: center
 
 .image[
