@@ -12,7 +12,7 @@ The presentation is using [embedmd](https://github.com/campoy/embedmd) for makin
 To "compile" the code samples and add them to the presentation run:
 
 ```sh
-$ ./go build
+$ ./run build
 ```
 
 ### Running the code
@@ -23,10 +23,10 @@ $ ./go build
 
 ## Run a local webserver
 
-You can use the `go` convenience script:
+You can use the `run` convenience script:
 
 ```sh
-$ ./go serve
+$ ./run serve
 ```
 It uses Python to spawn a small webserver. Any webserver serving `index.html` and the images will do though.
 
@@ -37,7 +37,16 @@ You can then use [http://localhost:8000/](http://localhost:8000/) to gain access
 The run the invididual tests simple use:
 
 ```
-$ ./go test1 # Runs first test
-$ ./go test2 # Runs second test
-$ ./go test3 # Runs third test
+$ ./run test1 # Runs first test
+$ ./run test2 # Runs second test
+$ ./run test3 # Runs third test
 ```
+
+You can switch to the failing tests on the `failing` branch:
+
+```
+$ git checkout failing
+$ ./run testX
+```
+
+_Note: The tests will fail, obviously ;)_
